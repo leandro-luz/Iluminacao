@@ -99,9 +99,9 @@ sql_criar_usuarios = """
         );"""
 sql_inserir_base_usuarios = 'INSERT INTO usuarios (nome, booleano_id, perfil_id, senha) VALUES (?,?,?,?)'
 sql_inserir_valores_usuarios = (
-    [('OPERADOR', 1, 3, '$2b$12$ZnVThjE1lVKdgjYbsnV9oepcYy34tswskVOgPhdsITFrNzWFHZ3oq')],
-    [('SUPERVISOR', 1, 2, '$2b$12$5fUBU4LWx/cR1DioiJNTLOeX3tABEtskBqKNjCyJ77Ge/QoNaRKAK')],
-    [('ADMIN', 1, 1, '$2b$12$BLGDcMkM1kuigfcZ.KGqJuvwdGKdWGlFymsq0FKTjgvhUmLD7iL0K')]
+    [('OPERADOR', 1, 3, '$2b$12$jNngFwYq2Ttm33xR6a0DZ.IYdsblz4XuejzpGYGTg923U/2/6UFpS')],
+    [('SUPERVISOR', 1, 2, '$2b$12$2nydp4dkjfvi7DWZEXnG.eYQu2sI6TlfUQaZe9Wslt44fFWf7EGbO')],
+    [('ADMINISTRADOR', 1, 1, '$2b$12$lF4y1dalv7sQe6jXfMlgm.uNr/Fd1SoIRHBJIGGHfWlDrowUOhwtK')]
 )
 sql_consultar_usuario = """SELECT nome, booleano_id, perfil_id, senha WHERE nome = ?"""
 

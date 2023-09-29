@@ -74,6 +74,7 @@ class Login(TelaBaseFilha):
                         tk.messagebox.showerror(title="Erro", message="Usuário e/ou Senha inválidos!")
                     else:
                         # verifica se é administrador, caso contrario verifica se o pc está valido para operar o sistema
+                        print(verificar_mac())
                         if usuario[0][4] == 1 or verificar_mac():
                             self.update_user(usuario_nome, usuario[0][4])
                             self.sair()
@@ -91,7 +92,7 @@ def verificar_mac():
     """Função que verifica se o mac_address do pc está cadastrado no BD"""
     resultado = False
 
-    if bd_consulta_valor_tabela('mac_address', 'mac_nome', str(hex(uuid.getnode()))):
-        resultado: True
+    if len(bd_consulta_valor_tabela('mac_address', 'mac_nome', str(hex(uuid.getnode())))) > 0:
+        resultado = True
 
     return resultado
