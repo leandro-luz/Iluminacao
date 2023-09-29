@@ -1,0 +1,940 @@
+('C:\\Users\\Manutenção '
+ 'Eletrica\\PycharmProjects\\Iluminacao\\build\\app\\PYZ-00.pyz',
+ [('subprocess',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\subprocess.py',
+   'PYMODULE'),
+  ('selectors',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\selectors.py',
+   'PYMODULE'),
+  ('contextlib',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\contextlib.py',
+   'PYMODULE'),
+  ('threading',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\threading.py',
+   'PYMODULE'),
+  ('_threading_local',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\_threading_local.py',
+   'PYMODULE'),
+  ('signal',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\signal.py',
+   'PYMODULE'),
+  ('_strptime',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\_strptime.py',
+   'PYMODULE'),
+  ('datetime',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\datetime.py',
+   'PYMODULE'),
+  ('calendar',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\calendar.py',
+   'PYMODULE'),
+  ('argparse',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\argparse.py',
+   'PYMODULE'),
+  ('textwrap',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\textwrap.py',
+   'PYMODULE'),
+  ('copy',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\copy.py',
+   'PYMODULE'),
+  ('gettext',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\gettext.py',
+   'PYMODULE'),
+  ('struct',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\struct.py',
+   'PYMODULE'),
+  ('shutil',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\shutil.py',
+   'PYMODULE'),
+  ('zipfile',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\zipfile.py',
+   'PYMODULE'),
+  ('py_compile',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\py_compile.py',
+   'PYMODULE'),
+  ('importlib.machinery',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\machinery.py',
+   'PYMODULE'),
+  ('importlib',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\__init__.py',
+   'PYMODULE'),
+  ('importlib._bootstrap',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\_bootstrap.py',
+   'PYMODULE'),
+  ('importlib._bootstrap_external',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\_bootstrap_external.py',
+   'PYMODULE'),
+  ('importlib.metadata',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\metadata.py',
+   'PYMODULE'),
+  ('importlib.abc',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('configparser',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\configparser.py',
+   'PYMODULE'),
+  ('email',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\__init__.py',
+   'PYMODULE'),
+  ('email.parser',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\parser.py',
+   'PYMODULE'),
+  ('email._policybase',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\_policybase.py',
+   'PYMODULE'),
+  ('email.utils',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\utils.py',
+   'PYMODULE'),
+  ('email._parseaddr',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\_parseaddr.py',
+   'PYMODULE'),
+  ('socket',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\socket.py',
+   'PYMODULE'),
+  ('random',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\random.py',
+   'PYMODULE'),
+  ('hashlib',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\hashlib.py',
+   'PYMODULE'),
+  ('logging',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\logging\\__init__.py',
+   'PYMODULE'),
+  ('pickle',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\pickle.py',
+   'PYMODULE'),
+  ('pprint',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\pprint.py',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\_compat_pickle.py',
+   'PYMODULE'),
+  ('string',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\string.py',
+   'PYMODULE'),
+  ('bisect',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\bisect.py',
+   'PYMODULE'),
+  ('email.feedparser',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\feedparser.py',
+   'PYMODULE'),
+  ('email.message',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\message.py',
+   'PYMODULE'),
+  ('email.policy',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\policy.py',
+   'PYMODULE'),
+  ('email.contentmanager',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\contentmanager.py',
+   'PYMODULE'),
+  ('email.quoprimime',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\quoprimime.py',
+   'PYMODULE'),
+  ('email.headerregistry',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\headerregistry.py',
+   'PYMODULE'),
+  ('email.iterators',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\iterators.py',
+   'PYMODULE'),
+  ('email.generator',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\generator.py',
+   'PYMODULE'),
+  ('email._encoded_words',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\_encoded_words.py',
+   'PYMODULE'),
+  ('base64',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\base64.py',
+   'PYMODULE'),
+  ('getopt',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\getopt.py',
+   'PYMODULE'),
+  ('quopri',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\quopri.py',
+   'PYMODULE'),
+  ('uu',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\uu.py',
+   'PYMODULE'),
+  ('optparse',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\optparse.py',
+   'PYMODULE'),
+  ('email._header_value_parser',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\_header_value_parser.py',
+   'PYMODULE'),
+  ('email.header',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\header.py',
+   'PYMODULE'),
+  ('email.base64mime',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\base64mime.py',
+   'PYMODULE'),
+  ('email.charset',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\charset.py',
+   'PYMODULE'),
+  ('email.encoders',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\encoders.py',
+   'PYMODULE'),
+  ('email.errors',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\email\\errors.py',
+   'PYMODULE'),
+  ('csv',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\csv.py',
+   'PYMODULE'),
+  ('importlib.util',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\util.py',
+   'PYMODULE'),
+  ('tarfile',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tarfile.py',
+   'PYMODULE'),
+  ('gzip',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\gzip.py',
+   'PYMODULE'),
+  ('_compression',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\_compression.py',
+   'PYMODULE'),
+  ('lzma',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\lzma.py',
+   'PYMODULE'),
+  ('bz2',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\bz2.py',
+   'PYMODULE'),
+  ('stringprep',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('tempfile',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tempfile.py',
+   'PYMODULE'),
+  ('getpass',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\getpass.py',
+   'PYMODULE'),
+  ('nturl2path',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\nturl2path.py',
+   'PYMODULE'),
+  ('ftplib',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ftplib.py',
+   'PYMODULE'),
+  ('netrc',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\netrc.py',
+   'PYMODULE'),
+  ('shlex',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\shlex.py',
+   'PYMODULE'),
+  ('mimetypes',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\mimetypes.py',
+   'PYMODULE'),
+  ('http.cookiejar',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\http\\cookiejar.py',
+   'PYMODULE'),
+  ('http',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\http\\__init__.py',
+   'PYMODULE'),
+  ('ssl',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ssl.py',
+   'PYMODULE'),
+  ('http.client',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\http\\client.py',
+   'PYMODULE'),
+  ('typing',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\typing.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('tkinter.messagebox',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\messagebox.py',
+   'PYMODULE'),
+  ('tkinter.commondialog',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\commondialog.py',
+   'PYMODULE'),
+  ('tkinter',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\__init__.py',
+   'PYMODULE'),
+  ('tkinter.constants',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\constants.py',
+   'PYMODULE'),
+  ('database.bd',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\database\\bd.py',
+   'PYMODULE'),
+  ('database', '-', 'PYMODULE'),
+  ('database.sql',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\database\\sql.py',
+   'PYMODULE'),
+  ('utils.times',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\utils\\times.py',
+   'PYMODULE'),
+  ('utils', '-', 'PYMODULE'),
+  ('sqlite3',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\sqlite3\\__init__.py',
+   'PYMODULE'),
+  ('sqlite3.dump',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\sqlite3\\dump.py',
+   'PYMODULE'),
+  ('sqlite3.dbapi2',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\sqlite3\\dbapi2.py',
+   'PYMODULE'),
+  ('view.principal',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\view\\principal.py',
+   'PYMODULE'),
+  ('view', '-', 'PYMODULE'),
+  ('utils.conexao',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\utils\\conexao.py',
+   'PYMODULE'),
+  ('pymodbus.client.sync',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\client\\sync.py',
+   'PYMODULE'),
+  ('pymodbus.client',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\client\\__init__.py',
+   'PYMODULE'),
+  ('pymodbus',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\__init__.py',
+   'PYMODULE'),
+  ('pymodbus.version',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\version.py',
+   'PYMODULE'),
+  ('pymodbus.client.common',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\client\\common.py',
+   'PYMODULE'),
+  ('pymodbus.other_message',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\other_message.py',
+   'PYMODULE'),
+  ('pymodbus.compat',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\compat.py',
+   'PYMODULE'),
+  ('imp',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\imp.py',
+   'PYMODULE'),
+  ('socketserver',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\socketserver.py',
+   'PYMODULE'),
+  ('six',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\six.py',
+   'PYMODULE'),
+  ('__future__',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\__future__.py',
+   'PYMODULE'),
+  ('pymodbus.device',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\device.py',
+   'PYMODULE'),
+  ('pymodbus.interfaces',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\interfaces.py',
+   'PYMODULE'),
+  ('pymodbus.pdu',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\pdu.py',
+   'PYMODULE'),
+  ('pymodbus.file_message',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\file_message.py',
+   'PYMODULE'),
+  ('pymodbus.diag_message',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\diag_message.py',
+   'PYMODULE'),
+  ('pymodbus.register_write_message',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\register_write_message.py',
+   'PYMODULE'),
+  ('pymodbus.register_read_message',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\register_read_message.py',
+   'PYMODULE'),
+  ('pymodbus.bit_write_message',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\bit_write_message.py',
+   'PYMODULE'),
+  ('pymodbus.bit_read_message',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\bit_read_message.py',
+   'PYMODULE'),
+  ('pymodbus.transaction',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\transaction.py',
+   'PYMODULE'),
+  ('pymodbus.framer.binary_framer',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\framer\\binary_framer.py',
+   'PYMODULE'),
+  ('pymodbus.framer',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\framer\\__init__.py',
+   'PYMODULE'),
+  ('pymodbus.framer.tls_framer',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\framer\\tls_framer.py',
+   'PYMODULE'),
+  ('pymodbus.framer.socket_framer',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\framer\\socket_framer.py',
+   'PYMODULE'),
+  ('pymodbus.framer.rtu_framer',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\framer\\rtu_framer.py',
+   'PYMODULE'),
+  ('pymodbus.framer.ascii_framer',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\framer\\ascii_framer.py',
+   'PYMODULE'),
+  ('pymodbus.exceptions',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\exceptions.py',
+   'PYMODULE'),
+  ('pymodbus.factory',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\factory.py',
+   'PYMODULE'),
+  ('pymodbus.mei_message',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\mei_message.py',
+   'PYMODULE'),
+  ('pymodbus.utilities',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\utilities.py',
+   'PYMODULE'),
+  ('pymodbus.constants',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\pymodbus\\constants.py',
+   'PYMODULE'),
+  ('serial',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\serial\\__init__.py',
+   'PYMODULE'),
+  ('serial.serialjava',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\serial\\serialjava.py',
+   'PYMODULE'),
+  ('serial.serialposix',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\serial\\serialposix.py',
+   'PYMODULE'),
+  ('serial.serialwin32',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\serial\\serialwin32.py',
+   'PYMODULE'),
+  ('ctypes',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ctypes\\__init__.py',
+   'PYMODULE'),
+  ('ctypes._endian',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ctypes\\_endian.py',
+   'PYMODULE'),
+  ('serial.win32',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\serial\\win32.py',
+   'PYMODULE'),
+  ('ctypes.wintypes',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ctypes\\wintypes.py',
+   'PYMODULE'),
+  ('serial.serialcli',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\serial\\serialcli.py',
+   'PYMODULE'),
+  ('serial.serialutil',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\serial\\serialutil.py',
+   'PYMODULE'),
+  ('view.agenda',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\view\\agenda.py',
+   'PYMODULE'),
+  ('view.base',
+   'C:\\Users\\Manutenção Eletrica\\PycharmProjects\\Iluminacao\\view\\base.py',
+   'PYMODULE'),
+  ('view.relogio',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\view\\relogio.py',
+   'PYMODULE'),
+  ('view.historico',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\view\\historico.py',
+   'PYMODULE'),
+  ('view.config_sistema',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\view\\config_sistema.py',
+   'PYMODULE'),
+  ('view.comunicacao',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\view\\comunicacao.py',
+   'PYMODULE'),
+  ('view.usuario',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\view\\usuario.py',
+   'PYMODULE'),
+  ('bcrypt',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\bcrypt\\__init__.py',
+   'PYMODULE'),
+  ('bcrypt.__about__',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\bcrypt\\__about__.py',
+   'PYMODULE'),
+  ('hmac',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\hmac.py',
+   'PYMODULE'),
+  ('view.login',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\view\\login.py',
+   'PYMODULE'),
+  ('PIL.ImageTk',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageTk.py',
+   'PYMODULE'),
+  ('PIL._deprecate',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\_deprecate.py',
+   'PYMODULE'),
+  ('PIL.Image',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\Image.py',
+   'PYMODULE'),
+  ('PIL.XpmImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\XpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageFile',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageFile.py',
+   'PYMODULE'),
+  ('PIL.XbmImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\XbmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XVThumbImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\XVThumbImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WmfImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\WmfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WebPImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\WebPImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TgaImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\TgaImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SunImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\SunImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SpiderImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\SpiderImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SgiImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\SgiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.QoiImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\QoiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PsdImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PsdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PixarImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PixarImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PdfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.features',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\features.py',
+   'PYMODULE'),
+  ('PIL.PdfParser',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PdfParser.py',
+   'PYMODULE'),
+  ('PIL.ImageSequence',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageSequence.py',
+   'PYMODULE'),
+  ('PIL.PcxImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcdImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PcdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PalmImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PalmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MspImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\MspImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpoImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\MpoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpegImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\MpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MicImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\MicImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.McIdasImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\McIdasImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Jpeg2KImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\Jpeg2KImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IptcImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\IptcImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImtImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImtImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcoImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\IcoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcnsImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\IcnsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Hdf5StubImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\Hdf5StubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GribStubImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\GribStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GbrImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\GbrImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FtexImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\FtexImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FpxImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\FpxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FliImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\FliImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FitsStubImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\FitsStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FitsImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\FitsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.EpsImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\EpsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DdsImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\DdsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DcxImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\DcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.CurImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\CurImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BufrStubImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\BufrStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BlpImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\BlpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TiffImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\TiffImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageOps',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageOps.py',
+   'PYMODULE'),
+  ('numbers',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\numbers.py',
+   'PYMODULE'),
+  ('fractions',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\fractions.py',
+   'PYMODULE'),
+  ('decimal',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\decimal.py',
+   'PYMODULE'),
+  ('_pydecimal',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('contextvars',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\contextvars.py',
+   'PYMODULE'),
+  ('PIL.ImageShow',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageShow.py',
+   'PYMODULE'),
+  ('PIL.ImageQt',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageQt.py',
+   'PYMODULE'),
+  ('PIL.ImageColor',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageColor.py',
+   'PYMODULE'),
+  ('colorsys',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\colorsys.py',
+   'PYMODULE'),
+  ('PIL.ImageFilter',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageFilter.py',
+   'PYMODULE'),
+  ('PIL.ImageCms',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageCms.py',
+   'PYMODULE'),
+  ('PIL.ImageWin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageWin.py',
+   'PYMODULE'),
+  ('PIL.PyAccess',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PyAccess.py',
+   'PYMODULE'),
+  ('PIL.ImagePalette',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImagePalette.py',
+   'PYMODULE'),
+  ('PIL.PaletteFile',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PaletteFile.py',
+   'PYMODULE'),
+  ('PIL.GimpPaletteFile',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\GimpPaletteFile.py',
+   'PYMODULE'),
+  ('PIL.GimpGradientFile',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\GimpGradientFile.py',
+   'PYMODULE'),
+  ('PIL.PngImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PngImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageChops',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageChops.py',
+   'PYMODULE'),
+  ('PIL.PpmImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\PpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\JpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegPresets',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\JpegPresets.py',
+   'PYMODULE'),
+  ('PIL.GifImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\GifImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BmpImagePlugin',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\BmpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL._util',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\_util.py',
+   'PYMODULE'),
+  ('PIL._binary',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\_binary.py',
+   'PYMODULE'),
+  ('PIL.TiffTags',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\TiffTags.py',
+   'PYMODULE'),
+  ('PIL.ImageMode',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ImageMode.py',
+   'PYMODULE'),
+  ('PIL.ExifTags',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\ExifTags.py',
+   'PYMODULE'),
+  ('PIL',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\__init__.py',
+   'PYMODULE'),
+  ('PIL._version',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\PIL\\_version.py',
+   'PYMODULE'),
+  ('uuid',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\uuid.py',
+   'PYMODULE'),
+  ('ctypes.util',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ctypes\\util.py',
+   'PYMODULE'),
+  ('ctypes._aix',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ctypes\\_aix.py',
+   'PYMODULE'),
+  ('ctypes.macholib.dyld',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ctypes\\macholib\\dyld.py',
+   'PYMODULE'),
+  ('ctypes.macholib',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ctypes\\macholib\\__init__.py',
+   'PYMODULE'),
+  ('ctypes.macholib.dylib',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ctypes\\macholib\\dylib.py',
+   'PYMODULE'),
+  ('ctypes.macholib.framework',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\ctypes\\macholib\\framework.py',
+   'PYMODULE'),
+  ('platform',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\platform.py',
+   'PYMODULE')])
