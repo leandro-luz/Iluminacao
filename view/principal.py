@@ -618,7 +618,7 @@ class Principal(tk.Tk):
             self.alterar_imagem(nome_imagem_3, imagem_3)
             self.alterar_parametro(nome_imagem_3, image=imagem_3)
 
-    def operacao(self):
+    def operacao_automatico(self):
         """Função para operar as areas que estiverem em modo automático """
 
         # Consulta no banco de dados os horarios das areas
@@ -1002,7 +1002,6 @@ def thread_atualizar_bd(principal):
 
 def thread_operacao(principal):
     """Função que realiza as operações em modo automatico"""
-
     while globals()["threads"]:
-        principal.operacao()
-        time.sleep(bd_consultar("sistema")[0][4] * 1000)
+        principal.operacao_automatico()
+        time.sleep(bd_consultar("sistema")[0][4] * 60)

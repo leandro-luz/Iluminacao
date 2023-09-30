@@ -74,7 +74,6 @@ class Login(TelaBaseFilha):
                         tk.messagebox.showerror(title="Erro", message="Usuário e/ou Senha inválidos!")
                     else:
                         # verifica se é administrador, caso contrario verifica se o pc está valido para operar o sistema
-                        print(verificar_mac())
                         if usuario[0][4] == 1 or verificar_mac():
                             self.update_user(usuario_nome, usuario[0][4])
                             self.sair()

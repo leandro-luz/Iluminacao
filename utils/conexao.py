@@ -13,7 +13,7 @@ def ler_clp(host, port, tipo, endereco=0):
     try:
         lista = []
         # cria um socket
-        client = ModbusTcpClient(host, port, timeout=0.5)
+        client = ModbusTcpClient(host, port, timeout=1)
         # realiza a conexao
         client.connect()
         # realiza a consulta do clp
@@ -35,7 +35,7 @@ def escrever_clp(host, port, endereco):
     """ Função para escrever um bit no endereço do CLP """
     try:
         # cria um socket
-        client = ModbusTcpClient(host, port, timeout=0.5)
+        client = ModbusTcpClient(host, port, timeout=1)
         # realiza a conexao
         client.connect()
         # gera um pulso no endereco informado
