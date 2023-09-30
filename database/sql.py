@@ -132,16 +132,16 @@ sql_inserir_base_areas = 'INSERT INTO areas (nome, hora_ligar, hora_desligar, ti
                          'conexao, local, ligado_parcial) VALUES (?,?,?,?,?,?,?,?,?)'
 
 sql_inserir_valores_areas = (
-    [('salao_embarque_internacional', '16:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('salao_embarque_domestico', '16:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('conectores', '16:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('salao_desembarque_internacional', '16:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('salao_desembarque_domestico', '16:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('saguao_embarque', '16:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('mezanino', '16:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('saguao_desembarque', '16:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('viaduto_superior', '16:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('viaduto_inferior', '16:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('salao_embarque_internacional', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('salao_embarque_domestico', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('conectores', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('salao_desembarque_internacional', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('salao_desembarque_domestico', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('saguao_embarque', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('mezanino', '07:00:00', '23:00:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('saguao_desembarque', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('viaduto_superior', '17:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('viaduto_inferior', '17:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
 )
 
 sql_atualizar_valores_areas = """UPDATE areas set hora_ligar = ?, hora_desligar = ? WHERE nome = ?"""

@@ -620,7 +620,6 @@ class Principal(tk.Tk):
 
     def operacao_automatico(self):
         """Função para operar as areas que estiverem em modo automático """
-
         # Consulta no banco de dados os horarios das areas
         areas = bd_consultar('areas')
         # Percorre por todas as areas
@@ -636,12 +635,10 @@ class Principal(tk.Tk):
 
             # Verifica as condições alarme=(0)sem alarme, conexao=(1)conectado, local=(1)remoto,
             if alarme == 0 and conexao == 1 and local_ == 1 and modo == 'AUTOMATICO':
-
                 # Verifica se esta desligada
                 if ligado == 0:
                     # Verifica se a hora atual pode ligar dentro da programacao
                     if verificar_horario(hora_ligar, hora_desligar):
-
                         # consulta os clps da area
                         clp_saidas = bd_consulta_generica(sql_consultar_clp_areas(nome, 'LIGAR'))
                         for clp in clp_saidas:

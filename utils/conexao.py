@@ -1,8 +1,5 @@
 from pymodbus.client.sync import ModbusTcpClient
 
-host_a = '192.168.0.3'
-port_a = '510'
-
 base_entradas = 8264
 base_saidas = 8192
 base_alarmes = 0
@@ -25,7 +22,6 @@ def ler_clp(host, port, tipo, endereco=0):
             lista = client.read_coils(base_entradas, 8, units=1).bits
         # fecha a conexao
         client.close()
-        # print('close')
         return True, lista
     except:
         return False, None

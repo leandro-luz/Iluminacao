@@ -260,10 +260,6 @@
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\bz2.py',
    'PYMODULE'),
-  ('stringprep',
-   'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\stringprep.py',
-   'PYMODULE'),
   ('tracemalloc',
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tracemalloc.py',
@@ -312,13 +308,17 @@
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\http\\client.py',
    'PYMODULE'),
-  ('_py_abc',
-   'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\_py_abc.py',
-   'PYMODULE'),
   ('typing',
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\typing.py',
+   'PYMODULE'),
+  ('stringprep',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\_py_abc.py',
    'PYMODULE'),
   ('tkinter.messagebox',
    'c:\\users\\manutenção '
