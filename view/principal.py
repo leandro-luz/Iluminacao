@@ -41,7 +41,7 @@ class Principal(tk.Tk):
 
     def carregar_variaveis(self):
         # self.nome = 'teste123'
-        self.versao = "ELT.001 - 29/09/2023"
+        self.versao = "ELT.002 - 30/09/2023"
         self.usuario = ""
         self.acessado = False
         self.tela = TelaVazia()
