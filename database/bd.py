@@ -56,12 +56,15 @@ class BD:
         # MAC_ADDRESS
         {'nome': 'mac_address', 'verificar': sql_verificar_mac_address, 'criar': sql_criar_mac_address,
          'inserir_valores': sql_inserir_valores_mac_address, 'inserir_base': sql_inserir_base_mac_address},
+        # DIA_SEMANA
+        {'nome': 'dias_semana', 'verificar': sql_verificar_dias_semana, 'criar': sql_criar_dias_semana,
+         'inserir_valores': sql_inserir_valores_dias_semana, 'inserir_base': sql_inserir_base_dias_semana},
     ]
 
     def conectar(self):
         """Abrir uma conexão no banco de dados"""
         try:
-            self.conn = sqlite3.connect(self.name_banco)
+            self.conn = sqlite3.connect(self.name_banco, timeout=15)
             self.cursor = self.conn.cursor()
         except Error as error:
             bd_registrar('eventos', 'inserir_base',

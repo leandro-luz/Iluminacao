@@ -187,7 +187,7 @@ class TelaBaseFilha(tk.Toplevel):
                     tipolista="texto", minimo=1, rowspan_lb=1, rowspan_sb=1):
         """Função para criar lista"""
         self.criar(Scrollbar, name=scrol_name, orient=VERTICAL, width=minimo)
-        self.criar(Listbox, name=lt_name, yscrollcommand=self.widgets[scrol_name].set, selectmode=SINGLE, exportselection=0, height=1)
+        self.criar(Listbox, name=lt_name, yscrollcommand=self.widgets[scrol_name].set, selectmode=SINGLE, exportselection=0, height=minimo)
 
         # inclusão dos itens no listbox
         for item in lista:
@@ -205,3 +205,9 @@ class TelaBaseFilha(tk.Toplevel):
         """Retorna o valor selecionado de um listbox"""
         for i in lista.curselection():
             return lista.get(i)
+
+    def ajustar_posicao_tela(self):
+        """Função que coleta a posição da tela principal"""
+        posicoes = self.winfo_geometry().split('+')
+        self.widthInc = posicoes[1]
+        self.heightInc = posicoes[2]

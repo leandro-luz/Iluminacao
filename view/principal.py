@@ -41,8 +41,9 @@ class Principal(tk.Tk):
 
     def carregar_variaveis(self):
         # self.nome = 'teste123'
-        self.versao = "ELT.002 - 30/09/2023"
+        self.versao = "ELT.004 - 06/10/2023"
         self.usuario = ""
+        self.cliquebotao = datetime.now()
         self.acessado = False
         self.tela = TelaVazia()
         self.tempoacessado = ""
@@ -427,9 +428,6 @@ class Principal(tk.Tk):
     def sair(self):
         """Função para saida do sistema"""
         if tk.messagebox.askokcancel("Sair da Aplicação", "Quer sair do Sistema de Controle e Monitoramento de Iluminacao?"):
-            # self.programacao_atualizacao.cancel()
-            # self.programacao_operacao.cancel()
-            # self.programacao_relogio.cancel()
             bd_registrar('eventos', 'inserir_base', [(get_now(), "Null", "ACESSO", "Sistema de Controle e Monitoramente de Iluminação FECHADO")])
             "Finalizar os ciclos de threads"
             finalizar_ciclos()
@@ -637,20 +635,22 @@ class Principal(tk.Tk):
             if alarme == 0 and conexao == 1 and local_ == 1 and modo == 'AUTOMATICO':
                 # Verifica se esta desligada
                 if ligado == 0:
-                    # Verifica se a hora atual pode ligar dentro da programacao
-                    if verificar_horario(hora_ligar, hora_desligar):
-                        # consulta os clps da area
-                        clp_saidas = bd_consulta_generica(sql_consultar_clp_areas(nome, 'LIGAR'))
-                        for clp in clp_saidas:
-                            # realiza a ação de ligar
-                            if escrever_clp(host=clp[1], port=clp[2], endereco=clp[3]):
-                                # grava no BD o log do evento
-                                bd_registrar('eventos', 'inserir_base',
-                                             [(get_now(), self.usuario, "OPERAÇÃO", f"LIGADO AUTOMATICAMENTE:{area[1]} - {clp[4]}")])
-                            else:
-                                # grava no BD o log do evento
-                                bd_registrar('eventos', 'inserir_base',
-                                             [(get_now(), self.usuario, "FALHAS", f"FALHA NA TENTATIVA DE LIGAR:{area[1]} - {clp[4]}")])
+                    # Verifica se é permitido ligar neste dia
+                    if verifica_dia_semana(area[10]):
+                        # Verifica se a hora atual pode ligar dentro da programacao
+                        if verificar_horario(hora_ligar, hora_desligar):
+                            # consulta os clps da area
+                            clp_saidas = bd_consulta_generica(sql_consultar_clp_areas(nome, 'LIGAR'))
+                            for clp in clp_saidas:
+                                # realiza a ação de ligar
+                                if escrever_clp(host=clp[1], port=clp[2], endereco=clp[3]):
+                                    # grava no BD o log do evento
+                                    bd_registrar('eventos', 'inserir_base',
+                                                 [(get_now(), self.usuario, "OPERAÇÃO", f"LIGADO AUTOMATICAMENTE:{area[1]} - {clp[4]}")])
+                                else:
+                                    # grava no BD o log do evento
+                                    bd_registrar('eventos', 'inserir_base',
+                                                 [(get_now(), self.usuario, "FALHAS", f"FALHA NA TENTATIVA DE LIGAR:{area[1]} - {clp[4]}")])
                 else:
                     # Verifica se hora_atual > hora_desligar
                     if not verificar_horario(hora_ligar, hora_desligar):
@@ -758,50 +758,32 @@ class Principal(tk.Tk):
         """Função que realiza as operações MANUALMENTE de ligar/desligar"""
         # busca no BD pelo nome a situação(ligado/desligado) atual do local
         status_atual = bd_consultar_operacao_area(nome)
-        # realiza a inversão de situação
-        if status_atual[0] == 1:
-            status_nome = "DESLIGADO MANUALMENTE"
-            clp_saidas = bd_consulta_generica(sql_consultar_clp_areas(nome, 'DESLIGAR'))
-        else:
-            status_nome = "LIGADO MANUALMENTE"
-            clp_saidas = bd_consulta_generica(sql_consultar_clp_areas(nome, 'LIGAR'))
+        clp_saidas = []
+        status_nome = ''
 
-        # Enviar as informações ao clp para ligar ou desligar
-        for clp in clp_saidas:
-            # realiza a ação de ligar
-            if escrever_clp(host=clp[1], port=clp[2], endereco=clp[3]):
-                # grava no BD o log do evento
-                bd_registrar('eventos', 'inserir_base', [(get_now(), self.usuario, "OPERAÇÃO", f"{status_nome} - {nome}")])
-
-        soma = 0
-        # Verifica coleta as informações dos clps e salva no BD
-        for clp in clp_saidas:
-            # verifica os acionamentos das saidas dos clps
-            conectado, valor = ler_clp(host=clp[1], port=clp[2], tipo='saidas')
-
-            if not conectado:
-
-                # se negativo altera o valor para falha
-                bd_registrar("areas", "atualizar_conexao", [(0, clp[0])])
-                break
+        # verifica se está permitido o clique dentro do prazo
+        if datetime.now() > self.cliquebotao:
+            # realiza a inversão de situação
+            if status_atual[0] == 1:
+                # realizar a pergunta de confirmação de desligamento
+                if tk.messagebox.askokcancel("Desligar", "Têm certeza que quer desligar está área?"):
+                    status_nome = "DESLIGADO MANUALMENTE"
+                    clp_saidas = bd_consulta_generica(sql_consultar_clp_areas(nome, 'DESLIGAR'))
             else:
-                # se positivo altera o valor para normal
-                bd_registrar("areas", "atualizar_conexao", [(1, clp[0])])
-                # incrementa a soma se a saida estiver ligada
-                if valor[clp[3] - 1]:
-                    soma += 1
-                    # verifica se foi acionado por completou parcialmente
+                status_nome = "LIGADO MANUALMENTE"
+                clp_saidas = bd_consulta_generica(sql_consultar_clp_areas(nome, 'LIGAR'))
 
-            if soma == 0:
-                # desligado totalmente
-                bd_registrar("areas", "atualizar_operacao", [(0, 0, nome)])
-            else:
-                if soma != len(clp_saidas):
-                    # ligado parcialmente
-                    bd_registrar("areas", "atualizar_operacao", [(1, 1, nome)])
-                else:
-                    # está ligado por completo
-                    bd_registrar("areas", "atualizar_operacao", [(1, 0, nome)])
+            # verifica se existe algum área para desligar
+            if clp_saidas:
+                # Enviar as informações ao clp para ligar ou desligar
+                for clp in clp_saidas:
+                    # realiza a ação de ligar
+                    if escrever_clp(host=clp[1], port=clp[2], endereco=clp[3]):
+                        # grava no BD o log do evento
+                        bd_registrar('eventos', 'inserir_base', [(get_now(), self.usuario, "OPERAÇÃO", f"{status_nome} - {nome}")])
+
+            # atualizando o tempo entre cliques
+            self.cliquebotao = datetime.now() + timedelta(seconds=2)
 
     def operacao_manual(self, nome):
         """Função que alterar o modo de operação manual/automático"""
@@ -846,8 +828,8 @@ class Principal(tk.Tk):
 
     def posicionar_tela(self, widht, height):
         """Função para posicionamento da tela"""
-        widht = self.winfo_screenwidth()
-        height = self.winfo_screenheight()
+        widht = int(self.winfo_screenwidth() * 0.95)
+        height = int(self.winfo_screenheight() * 0.85)
         self.geometry(f'{widht}x{height}+{0}+{0}')
 
     def ativar_desativar_botoes(self, ativar, perfil=0):
@@ -1002,3 +984,22 @@ def thread_operacao(principal):
     while globals()["threads"]:
         principal.operacao_automatico()
         time.sleep(bd_consultar("sistema")[0][4] * 60)
+
+
+def verifica_dia_semana(dia_semana):
+    """Função que verifica a data de operação"""
+
+    resultado = False
+    hoje = datetime.now().weekday()
+
+    # todos os dia
+    if dia_semana == 1:
+        resultado = True
+    # dias úteis
+    if dia_semana == 2 and hoje <= 4:
+        resultado = True
+    # fim de semana
+    if dia_semana == 3 and hoje >= 5:
+        resultado = True
+
+    return resultado

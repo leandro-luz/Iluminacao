@@ -264,6 +264,14 @@
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tracemalloc.py',
    'PYMODULE'),
+  ('stringprep',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('typing',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\typing.py',
+   'PYMODULE'),
   ('tempfile',
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tempfile.py',
@@ -307,14 +315,6 @@
   ('http.client',
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\http\\client.py',
-   'PYMODULE'),
-  ('typing',
-   'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\typing.py',
-   'PYMODULE'),
-  ('stringprep',
-   'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\stringprep.py',
    'PYMODULE'),
   ('_py_abc',
    'c:\\users\\manutenção '

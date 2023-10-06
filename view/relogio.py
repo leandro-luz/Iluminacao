@@ -1,6 +1,6 @@
-import tkinter as tk
 from tkinter import *
 from view.base import TelaBaseFilha
+from database.bd import *
 
 
 class Relogio(TelaBaseFilha):
@@ -38,6 +38,39 @@ class Relogio(TelaBaseFilha):
         """Função para salvar na tela de configurações o horário selecionado"""
         # Verifica se foram selecionado a hora e o minuto
         if len(self.widgets['ltb_horas'].curselection()) > 0 and len(self.widgets['ltb_minutos'].curselection()) > 0:
-            self.alterar_parametro(self.posicao, text=str("{:02d}".format(self.widgets['ltb_horas'].curselection()[0])) + ':' +
-                                                      str("{:02d}".format(self.widgets['ltb_minutos'].curselection()[0])) + ':00')
+            self.alterar_parametro(self.posicao, text='{0}:{1}:00'.format(str("{:02d}".format(self.widgets['ltb_horas'].curselection()[0])),
+                                                                          str("{:02d}".format(self.widgets['ltb_minutos'].curselection()[0]))))
+            self.sair()
+
+
+class DiaSemana(TelaBaseFilha):
+    def __init__(self, parent, usuario, tela_fechada, alterar_parametro, posicao, nome, widthinc, heightinc):
+        super().__init__(parent, usuario, tela_fechada, nome, widthinc, heightinc)
+        self.alterar_parametro = alterar_parametro
+        self.posicao = posicao
+        # Tamanho da tela
+        self.posicionar_tela(widht=300, height=200)
+        # ajustar os tamanhos das colunas e linhas
+        self.ajustar_colunas_linhas(4, 4)
+
+        # Linha do Título
+        self.criar(Label, name='titulo', borderwidth=2, relief='groove', text="OPERAÇÃO NOS DIAS:", font=self.fonteTitulo, pady=10)
+        self.instalar_em(name='titulo', row=0, column=0, rowspan=1, columnspan=4, sticky=tk.NSEW)
+
+        # Horas
+        self.criar_lista('sb_dias', 'lt_dias', lista=bd_consultar("dias_semana"),
+                         row1=2, col_lb=0, colspan_lb=3, col_sb=1, colspan_sb=1, minimo=0)
+
+        # Botões Salvar e Cancelar
+        self.criar(Button, name='bt_salvar', text="Salvar", font=self.fonte, command=self.salvar, fg="green")
+        self.instalar_em(name='bt_salvar', row=3, column=0, sticky=tk.NSEW)
+        self.criar(Button, name='bt_cancelar', text="SAIR", font=self.fonte, command=self.sair, fg="red")
+        self.instalar_em(name='bt_cancelar', row=3, column=2, sticky=tk.NSEW)
+
+    def salvar(self):
+        """Função para salvar na tela de configurações o horário selecionado"""
+        # Verifica se foram selecionado qual configuração de dias da semana
+        if len(self.widgets['lt_dias'].curselection()) > 0:
+            self.alterar_parametro(self.posicao, text=bd_consulta_valor_tabela('dias_semana', 'dia_semana_id',
+                                                                               self.widgets['lt_dias'].curselection()[0] + 1)[0][1])
             self.sair()

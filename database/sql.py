@@ -101,8 +101,9 @@ sql_inserir_base_usuarios = 'INSERT INTO usuarios (nome, booleano_id, perfil_id,
 sql_inserir_valores_usuarios = (
     [('OPERADOR', 1, 3, '$2b$12$jNngFwYq2Ttm33xR6a0DZ.IYdsblz4XuejzpGYGTg923U/2/6UFpS')],
     [('SUPERVISOR', 1, 2, '$2b$12$2nydp4dkjfvi7DWZEXnG.eYQu2sI6TlfUQaZe9Wslt44fFWf7EGbO')],
-    [('ADMINISTRADOR', 1, 1, '$2b$12$lF4y1dalv7sQe6jXfMlgm.uNr/Fd1SoIRHBJIGGHfWlDrowUOhwtK')]
+    [('ADMINISTRADOR', 1, 1, '$2b$12$lF4y1dalv7sQe6jXfMlgm.uNr/Fd1SoIRHBJIGGHfWlDrowUOhwtK')],
 )
+
 sql_consultar_usuario = """SELECT nome, booleano_id, perfil_id, senha WHERE nome = ?"""
 
 sql_consulta_lista_usuario = """
@@ -125,26 +126,27 @@ sql_criar_areas = """
         ligado_parcial INTEGER NOT NULL,
         alarme INTEGER NOT NULL,
         conexao INTEGER NOT NULL,
-        local INTEGER NOT NULL
+        local INTEGER NOT NULL,
+        dia_semana INTEGER NOT NULL
         );"""
 
 sql_inserir_base_areas = 'INSERT INTO areas (nome, hora_ligar, hora_desligar, tipo_operacao, ligado, alarme, ' \
-                         'conexao, local, ligado_parcial) VALUES (?,?,?,?,?,?,?,?,?)'
+                         'conexao, local, ligado_parcial, dia_semana) VALUES (?,?,?,?,?,?,?,?,?,?)'
 
 sql_inserir_valores_areas = (
-    [('salao_embarque_internacional', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('salao_embarque_domestico', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('conectores', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('salao_desembarque_internacional', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('salao_desembarque_domestico', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('saguao_embarque', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('mezanino', '07:00:00', '23:00:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('saguao_desembarque', '16:00:00', '06:20:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('viaduto_superior', '17:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
-    [('viaduto_inferior', '17:00:00', '05:30:00', 'AUTOMATICO', 1, 0, 0, 0, 0)],
+    [('salao_embarque_internacional', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
+    [('salao_embarque_domestico', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
+    [('conectores', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
+    [('salao_desembarque_internacional', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
+    [('salao_desembarque_domestico', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
+    [('saguao_embarque', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
+    [('mezanino', '07:00:00', '23:00:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
+    [('saguao_desembarque', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
+    [('viaduto_superior', '17:00:00', '05:30:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
+    [('viaduto_inferior', '16:30:00', '05:30:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
 )
 
-sql_atualizar_valores_areas = """UPDATE areas set hora_ligar = ?, hora_desligar = ? WHERE nome = ?"""
+sql_atualizar_valores_areas = """UPDATE areas set hora_ligar = ?, hora_desligar = ?, dia_semana = ? WHERE nome = ?"""
 sql_atualizar_operacao_areas = """UPDATE areas set ligado = ?, ligado_parcial = ? WHERE nome = ?"""
 sql_atualizar_conexao_areas = """UPDATE areas set conexao = ? WHERE nome = ?"""
 sql_atualizar_local_areas = """UPDATE areas set local = ? WHERE nome = ?"""
@@ -413,3 +415,20 @@ sql_criar_mac_address = """
 sql_inserir_base_mac_address = 'INSERT INTO mac_address (mac_nome) VALUES (?)'
 
 sql_inserir_valores_mac_address = []
+
+""" --------------------------------------------------------------------------- """
+# TABELA DIAS DA SEMANA
+sql_verificar_dias_semana = verificar_basico('dias_semana')
+
+sql_criar_dias_semana = """
+        CREATE TABLE dias_semana (
+        dia_semana_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        nome TEXT NOT NULL
+        );"""
+sql_inserir_base_dias_semana = 'INSERT INTO dias_semana (nome) VALUES (?)'
+
+sql_inserir_valores_dias_semana = [(
+    ['TODOS DIAS'],
+    ['DIAS ÚTEIS'],
+    ['FIM DE SEMANA'],
+)]
