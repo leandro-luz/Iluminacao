@@ -94,6 +94,7 @@ class TelaBaseFilha(tk.Toplevel):
         return name
 
     def carregar_imagens(self, prefixo, largura, comprimento):
+        """Função que carrega as imagens conforme as dimensões repassadas"""
         for imagem in bd_consultar("imagens"):
             setattr(self, prefixo + imagem[1], ImageTk.PhotoImage(Image.open(imagem[2]).resize((largura, comprimento))))
 

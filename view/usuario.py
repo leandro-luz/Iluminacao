@@ -28,12 +28,12 @@ class CadastrarUsuario(TelaBaseFilha):
 
         self.criar(Label, name='lb_senha', text="Senha:", font=self.fonte, fg="blue", borderwidth=2, relief='groove', anchor='e')
         self.instalar_em(name='lb_senha', row=4, column=1, rowspan=1, columnspan=1, sticky=tk.NSEW)
-        self.criar(Entry, name='senha', borderwidth=2, relief='groove')
+        self.criar(Entry, name='senha', borderwidth=2, relief='groove', show='*')
         self.instalar_em(name='senha', row=4, column=2, rowspan=1, columnspan=1, sticky=tk.NSEW)
 
         self.criar(Label, name='lb_senha_confirm', text="Confirme a Senha:", font=self.fonte, fg="blue", borderwidth=2, relief='groove', anchor='e')
         self.instalar_em(name='lb_senha_confirm', row=5, column=1, rowspan=1, columnspan=1, sticky=tk.NSEW)
-        self.criar(Entry, name='senha_confirm', borderwidth=2, relief='groove')
+        self.criar(Entry, name='senha_confirm', borderwidth=2, relief='groove', show='*')
         self.instalar_em(name='senha_confirm', row=5, column=2, rowspan=1, columnspan=1, sticky=tk.NSEW)
 
         self.criar(Button, name='bt_ok', text="OK", command=self.validar, fg="green", font=self.fonte)
@@ -133,12 +133,12 @@ class AlterarUsuario(TelaBaseFilha):
 
         self.criar(Label, name='lb_senha', text="Senha:", font=self.fonte, fg="blue", borderwidth=2, relief='groove', anchor='e')
         self.instalar_em(name='lb_senha', row=4, column=2, rowspan=1, columnspan=1, sticky=tk.NSEW)
-        self.criar(Entry, name='senha', borderwidth=2, relief='groove')
+        self.criar(Entry, name='senha', borderwidth=2, relief='groove', show='*')
         self.instalar_em(name='senha', row=4, column=3, rowspan=1, columnspan=1, sticky=tk.NSEW)
 
         self.criar(Label, name='lb_senha_confirm', text="Confirme a Senha:", font=self.fonte, fg="blue", borderwidth=2, relief='groove', anchor='e')
         self.instalar_em(name='lb_senha_confirm', row=5, column=2, rowspan=1, columnspan=1, sticky=tk.NSEW)
-        self.criar(Entry, name='senha_confirm', borderwidth=2, relief='groove')
+        self.criar(Entry, name='senha_confirm', borderwidth=2, relief='groove', show='*')
         self.instalar_em(name='senha_confirm', row=5, column=3, rowspan=1, columnspan=1, sticky=tk.NSEW)
 
         self.criar(Button, name='bt_ok', text="OK", command=self.validar, fg="green", font=self.fonte)
@@ -171,8 +171,12 @@ class AlterarUsuario(TelaBaseFilha):
                     perfil_id = perfil[0]
                     # verificar se as senhas são iguais
                     if senha == senha_confirm:
+
+                        # criptografar a senha
+                        hash_senha = bcrypt.hashpw(senha.upper().encode('utf-8'), bcrypt.gensalt())
+
                         # alterar dados do usuário
-                        bd_registrar("usuarios", 'atualizar_usuario', [(1, perfil_id, senha, usuario_nome)])
+                        bd_registrar("usuarios", 'atualizar_usuario', [(1, perfil_id, hash_senha, usuario_nome)])
                         # registrar o evento cadastro usuario
                         bd_registrar('eventos', 'inserir_base', [(get_now(), self.usuario, "CADASTRO", f"ALTERADO O USUARIO - {usuario_nome}")])
                         # fechar a tela

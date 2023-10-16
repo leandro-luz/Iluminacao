@@ -362,7 +362,8 @@ class ListarIO(TelaBaseFilha):
 
         self.criar(Label, name='titulo', borderwidth=2, relief='groove', text="LISTA DE ENTRADAS E SAÍDAS", font=self.fonteSubtitulo, pady=10)
         self.instalar_em(name='titulo', row=1, column=1, rowspan=1, columnspan=7, sticky=tk.NSEW)
-        self.criar(Label, name='subtitulo', borderwidth=2, relief='groove', text="NOME - CLP - TIPO - ÁREA", font=self.fonteSubtitulo, anchor='w')
+        self.criar(Label, name='subtitulo', borderwidth=2, relief='groove', text="NOME - ID - CLP - TIPO - ÁREA", font=self.fonteSubtitulo,
+                   anchor='w')
         self.instalar_em(name='subtitulo', row=2, column=1, rowspan=1, columnspan=7, sticky=tk.NSEW)
 
         self.criar_lista('sb_io', 'lt_io', lista=bd_consulta_generica(sql_consultar_entradas_saidas_concatenada),

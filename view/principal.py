@@ -40,13 +40,13 @@ class Principal(tk.Tk):
         self.carregar_variaveis()
 
     def carregar_variaveis(self):
-        # self.nome = 'teste123'
-        self.versao = "ELT.004 - 06/10/2023"
+        """Função que carrega as variáveis para a tela principal"""
+        self.versao = "ELT.005 - 16/10/2023"
         self.usuario = ""
         self.cliquebotao = datetime.now()
         self.acessado = False
         self.tela = TelaVazia()
-        self.tempoacessado = ""
+        self.tempoacessado = datetime.now()
         # Tamanho da tela
         self.widthInc = 0
         self.heightInc = 0
@@ -129,6 +129,7 @@ class Principal(tk.Tk):
         bd_registrar('eventos', 'inserir_base', [(get_now(), "Null", "ACESSO", "Sistema de Controle e Monitoramente de Iluminação INICIADO")])
 
     def montar_tela(self):
+        """Função que monta os elementos na tela principal"""
         # Linha do Título
         self.criar(Label, name='titulo', borderwidth=2, relief='groove', text="CONTROLE E MONITORAMENTO - ILUMINAÇÃO", font=self.fonteTitulo, pady=10)
         self.instalar_em(name='titulo', row=0, column=0, rowspan=2, columnspan=13, sticky=tk.NSEW)
@@ -419,7 +420,6 @@ class Principal(tk.Tk):
 
         historico_menu = Menu(self, tearoff=0, font=self.fonte)
         historico_menu.add_command(label="Listar", command=lambda: self.crud("historico", 'historico'), font=self.fonte)
-        historico_menu.add_command(label="Excluir_Falhas", command=self.excluir_falhas, font=self.fonte)
         self.menubar.add_cascade(label="Histórico", menu=historico_menu, font=self.fonte)
         self.menubar.entryconfig("Histórico", state='disabled')
 
@@ -801,25 +801,27 @@ class Principal(tk.Tk):
 
     def operacao_local(self, nome):
         """Função que alterar o modo de operação local/remoto"""
-        # conferir o valor atual
-        status_atual = bd_consulta_valor_tabela('areas', 'nome', nome)[0]
-        # realiza a inversão de situação
-        if status_atual[9] == 1:
-            status_nome = "LOCAL"
-            endereco = 9
-        else:
-            status_nome = "REMOTO"
-            endereco = 10
+        # Confirmação de alteração de modo
+        if tk.messagebox.askokcancel("Local/Remoto", "Têm certeza que quer alterar o modo está área?"):
+            # conferir o valor atual
+            status_atual = bd_consulta_valor_tabela('areas', 'nome', nome)[0]
+            # realiza a inversão de situação
+            if status_atual[9] == 1:
+                status_nome = "LOCAL"
+                endereco = 9
+            else:
+                status_nome = "REMOTO"
+                endereco = 10
 
-        # lista dos clps vinculado a area
-        clp_saidas = bd_consulta_generica(sql_consultar_clp_areas(nome, 'LIGAR'))
-        # Enviar as informações ao clp para ligar ou desligar
-        for clp in clp_saidas:
-            # realiza a ação de ligar
-            if escrever_clp(host=clp[1], port=clp[2], endereco=endereco):
-                # grava no BD o log do evento
-                bd_registrar('eventos', 'inserir_base', [(get_now(), self.usuario, "CONFIGURAÇÃO_AREA",
-                                                          f"Alterado o controle de operação manualmente para {status_nome} de {nome}")])
+            # lista dos clps vinculado a area
+            clp_saidas = bd_consulta_generica(sql_consultar_clp_areas(nome, 'LIGAR'))
+            # Enviar as informações ao clp para ligar ou desligar
+            for clp in clp_saidas:
+                # realiza a ação de ligar
+                if escrever_clp(host=clp[1], port=clp[2], endereco=endereco):
+                    # grava no BD o log do evento
+                    bd_registrar('eventos', 'inserir_base', [(get_now(), self.usuario, "CONFIGURAÇÃO_AREA",
+                                                              f"Alterado o controle de operação manualmente para {status_nome} de {nome}")])
 
     def agenda(self, area):
         """Função abertura da tela de configuração da área"""
@@ -913,10 +915,6 @@ class Principal(tk.Tk):
             bd_registrar("mac_address", 'inserir_base', [[(valor)]])
             bd_registrar('eventos', 'inserir_base', [(get_now(), self.usuario, "CADASTRO", f"CADASTRADO NOVO MAC_ADDRESS - {valor}")])
             tk.messagebox.showinfo(title="Sucesso", message="Computador habilitado!")
-
-    def excluir_falhas(self):
-        """Função que exclui as falhas existentes"""
-        bd_excluir_item('eventos', 'FALHAS')
 
 
 def verificar_horario(ligar_txt, desligar_txt):

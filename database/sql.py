@@ -140,7 +140,7 @@ sql_inserir_valores_areas = (
     [('salao_desembarque_internacional', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
     [('salao_desembarque_domestico', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
     [('saguao_embarque', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
-    [('mezanino', '07:00:00', '23:00:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
+    [('mezanino', '07:00:00', '23:00:00', 'MANUAL', 1, 0, 0, 0, 0, 2)],
     [('saguao_desembarque', '16:00:00', '06:20:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
     [('viaduto_superior', '17:00:00', '05:30:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
     [('viaduto_inferior', '16:30:00', '05:30:00', 'MANUAL', 1, 0, 0, 0, 0, 1)],
@@ -399,7 +399,7 @@ sql_criar_sistema = """
         );"""
 sql_inserir_base_sistema = 'INSERT INTO sistema (tela_aberta, login, atualizacao, operacao) VALUES (?,?,?,?)'
 sql_inserir_valores_sistema = [(
-    [5, 5, 1, 10],
+    [5, 10, 1, 1],
 )]
 sql_atualizar_valores_sistema = """UPDATE sistema set tela_aberta = ?, login = ?, atualizacao = ?, operacao = ? WHERE sistema_id = 1"""
 

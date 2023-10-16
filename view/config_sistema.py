@@ -98,8 +98,6 @@ class AlterarConfigSistema(TelaBaseFilha):
 
                 # fechar a tela
                 self.logout_user("AUTOMATICAMENTE")
-
-
         else:
             erro = 1
 
