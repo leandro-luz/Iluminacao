@@ -25,7 +25,6 @@ missing module named grp - imported by shutil (optional), tarfile (optional), pa
 missing module named pwd - imported by posixpath (delayed, conditional), shutil (optional), tarfile (optional), pathlib (delayed, conditional, optional), http.server (delayed, optional), webbrowser (delayed), netrc (delayed, conditional), getpass (delayed), distutils.util (delayed, conditional, optional)
 missing module named _scproxy - imported by urllib.request (conditional)
 missing module named termios - imported by tty (top-level), getpass (optional), serial.serialposix (top-level)
-missing module named sqlite3.Error - imported by sqlite3 (top-level), database.bd (top-level)
 missing module named SocketServer - imported by pymodbus.compat (conditional)
 missing module named StringIO - imported by six (conditional)
 missing module named fcntl - imported by serial.serialposix (top-level)
@@ -47,3 +46,4 @@ missing module named vms_lib - imported by platform (delayed, conditional, optio
 missing module named 'java.lang' - imported by platform (delayed, optional), xml.sax._exceptions (conditional)
 missing module named java - imported by platform (delayed)
 missing module named _winreg - imported by platform (delayed, optional)
+missing module named sqlite3.Error - imported by sqlite3 (top-level), database.bd (top-level)

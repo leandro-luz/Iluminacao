@@ -104,7 +104,7 @@ def criar_tabela(consulta):
         bd.fechar()
 
 
-def verificar_banco():
+def verificar_banco(splash, incrementar_contador):
     """Verificar se existem as tabelas no banco de dados"""
     resultado = True
     try:
@@ -113,24 +113,29 @@ def verificar_banco():
         bd.conectar()
         lista_tabelas = bd.lista_tabelas
         bd.fechar()
-
+        x = 1
+        texto = ''
         for tabela in lista_tabelas:
             # Verifica a existencia da tabela, caso contrario cria a tabela
             if not verificar_existencia_tabela(tabela['verificar']):
                 if criar_tabela(tabela['criar']):
-                    bd_registrar('eventos', 'inserir_base', [(get_now(), "Null", "INICIALIZAÇÃO",
-                                                              f"Tabela {tabela['nome']} foi criada no Banco de Dados")])
+                    texto = f"Tabela {tabela['nome']} foi criada com sucesso no Banco de Dados"
+                    bd_registrar('eventos', 'inserir_base', [(get_now(), "Null", "INICIALIZAÇÃO", texto)])
                 else:
-                    # Impossibilita do sistema subir devido ao erro em alguma tabela
+                    # Impossibilidade do sistema subir devido ao erro em alguma tabela
+                    texto = f"Erro na Tabela {tabela['nome']} ao tentar ser criada no Banco de Dados"
                     resultado = False
                 if tabela['inserir_valores']:
                     for valores in tabela['inserir_valores']:
                         bd_registrar(tabela['nome'], 'inserir_base', valores)
-                    bd_registrar('eventos', 'inserir_base', [(get_now(), "Null",
-                                                              "INICIALIZAÇÃO", f"Tabela {tabela['nome']} foi populada no Banco de Dados")])
+                    texto = f"Tabela {tabela['nome']} foi populada no Banco de Dados"
+                    bd_registrar('eventos', 'inserir_base', [(get_now(), "Null", "INICIALIZAÇÃO", texto)])
             else:
-                bd_registrar('eventos', 'inserir_base',
-                             [(get_now(), 'Null', "INICIALIZAÇÃO", f"Tabela {tabela['nome']} já existe no Banco de Dados")])
+                texto = f"Tabela {tabela['nome']} já existe no Banco de Dados"
+                bd_registrar('eventos', 'inserir_base', [(get_now(), 'Null', "INICIALIZAÇÃO", texto)])
+            # atualiza o progressbar do splash
+            incrementar_contador(splash, int(x * 100 / len(lista_tabelas)), texto)
+            x += 1
     except Error as error:
         bd_registrar('eventos', 'inserir_base',
                      [(get_now(), 'Null', "FALHAS",

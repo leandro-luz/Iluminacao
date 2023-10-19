@@ -41,7 +41,7 @@ class Principal(tk.Tk):
 
     def carregar_variaveis(self):
         """Função que carrega as variáveis para a tela principal"""
-        self.versao = "ELT.005 - 16/10/2023"
+        self.versao = "ELT.006 - 19/10/2023"
         self.usuario = ""
         self.cliquebotao = datetime.now()
         self.acessado = False
@@ -64,6 +64,7 @@ class Principal(tk.Tk):
             self.fonte = ("Verdana", "14")
             self.fonteSubtitulo = ("Verdana", "18", "bold")
             self.fonteTitulo = ("Verdana", "25", "bold")
+            self.fonteTexto = ("Verdana", "10")
             self.tamanho_imagens = 75
             self.tamanho_imagens_legenda = 50
         else:
@@ -71,6 +72,7 @@ class Principal(tk.Tk):
             self.fonte = ("Verdana", "10")
             self.fonteSubtitulo = ("Verdana", "12", "bold")
             self.fonteTitulo = ("Verdana", "18", "bold")
+            self.fonteTexto = ("Verdana", "7")
             self.tamanho_imagens = 50
             self.tamanho_imagens_legenda = 25
 
@@ -159,8 +161,7 @@ class Principal(tk.Tk):
                               borderwidth=2, relief='groove', command=lambda: self.operacao_local("salao_embarque_internacional"))
         self.instalar_em(name='img_controle_salao_embarque_internacional', row=6, column=1, rowspan=1, columnspan=1, sticky=tk.NSEW)
         self.criar_com_imagem(Label, name='img_salao_embarque_internacional', render=self.img_desconectado, image=self.img_desconectado,
-                              borderwidth=2,
-                              relief='groove')
+                              borderwidth=2, relief='groove')
         self.instalar_em(name='img_salao_embarque_internacional', row=5, column=2, rowspan=2, columnspan=2, sticky=tk.NSEW)
 
         self.criar(Button, name='bt_configuracao_salao_embarque_internacional', text="#", font=self.fonteSubtitulo,
@@ -914,6 +915,10 @@ class Principal(tk.Tk):
         else:
             bd_registrar("mac_address", 'inserir_base', [[(valor)]])
             bd_registrar('eventos', 'inserir_base', [(get_now(), self.usuario, "CADASTRO", f"CADASTRADO NOVO MAC_ADDRESS - {valor}")])
+
+            # força as thread a iniciarem
+            inicializar_ciclos(self)
+
             tk.messagebox.showinfo(title="Sucesso", message="Computador habilitado!")
 
 
@@ -939,17 +944,25 @@ def verificar_horario(ligar_txt, desligar_txt):
 
 def inicializar_ciclos(principal):
     """Função que inicializa a thread para a atualizacao do relogio"""
-    t1 = Thread(name='atualizar_relogio', target=lambda: thread_atualizar_relogio(principal))
-    t1.daemon = True
-    t1.start()
 
-    t2 = Thread(name='atualizar_bd', target=lambda: thread_atualizar_bd(principal))
-    t2.daemon = True
-    t2.start()
+    # coleta o mac_id do computador
+    valor = str(hex(uuid.getnode()))
 
-    t3 = Thread(name='operacao', target=lambda: thread_operacao(principal))
-    t3.daemon = True
-    t3.start()
+    # verifica se mac_address está cadastrada no BD
+    if bd_consulta_valor_tabela('mac_address', 'mac_nome', valor):
+        t1 = Thread(name='atualizar_relogio', target=lambda: thread_atualizar_relogio(principal))
+        t1.daemon = True
+        t1.start()
+
+        t2 = Thread(name='atualizar_bd', target=lambda: thread_atualizar_bd(principal))
+        t2.daemon = True
+        t2.start()
+
+        t3 = Thread(name='operacao', target=lambda: thread_operacao(principal))
+        t3.daemon = True
+        t3.start()
+    else:
+        tk.messagebox.showerror(title="Erro", message="Computador não está habilitado, contacte o administrador!")
 
 
 def thread_operar(principal, posicao):

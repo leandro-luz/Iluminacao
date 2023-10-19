@@ -260,6 +260,10 @@
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\bz2.py',
    'PYMODULE'),
+  ('typing',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\typing.py',
+   'PYMODULE'),
   ('tracemalloc',
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tracemalloc.py',
@@ -268,9 +272,9 @@
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\stringprep.py',
    'PYMODULE'),
-  ('typing',
+  ('_py_abc',
    'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\typing.py',
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\_py_abc.py',
    'PYMODULE'),
   ('tempfile',
    'c:\\users\\manutenção '
@@ -316,10 +320,11 @@
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\http\\client.py',
    'PYMODULE'),
-  ('_py_abc',
-   'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\_py_abc.py',
+  ('view.splash',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\view\\splash.py',
    'PYMODULE'),
+  ('view', '-', 'PYMODULE'),
   ('tkinter.messagebox',
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\messagebox.py',
@@ -328,45 +333,15 @@
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\commondialog.py',
    'PYMODULE'),
-  ('tkinter',
-   'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\__init__.py',
-   'PYMODULE'),
-  ('tkinter.constants',
-   'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\constants.py',
-   'PYMODULE'),
-  ('database.bd',
+  ('view.principal',
    'C:\\Users\\Manutenção '
-   'Eletrica\\PycharmProjects\\Iluminacao\\database\\bd.py',
-   'PYMODULE'),
-  ('database', '-', 'PYMODULE'),
-  ('database.sql',
-   'C:\\Users\\Manutenção '
-   'Eletrica\\PycharmProjects\\Iluminacao\\database\\sql.py',
+   'Eletrica\\PycharmProjects\\Iluminacao\\view\\principal.py',
    'PYMODULE'),
   ('utils.times',
    'C:\\Users\\Manutenção '
    'Eletrica\\PycharmProjects\\Iluminacao\\utils\\times.py',
    'PYMODULE'),
   ('utils', '-', 'PYMODULE'),
-  ('sqlite3',
-   'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\sqlite3\\__init__.py',
-   'PYMODULE'),
-  ('sqlite3.dump',
-   'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\sqlite3\\dump.py',
-   'PYMODULE'),
-  ('sqlite3.dbapi2',
-   'c:\\users\\manutenção '
-   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\sqlite3\\dbapi2.py',
-   'PYMODULE'),
-  ('view.principal',
-   'C:\\Users\\Manutenção '
-   'Eletrica\\PycharmProjects\\Iluminacao\\view\\principal.py',
-   'PYMODULE'),
-  ('view', '-', 'PYMODULE'),
   ('utils.conexao',
    'C:\\Users\\Manutenção '
    'Eletrica\\PycharmProjects\\Iluminacao\\utils\\conexao.py',
@@ -539,6 +514,11 @@
    'C:\\Users\\Manutenção '
    'Eletrica\\PycharmProjects\\Iluminacao\\venv\\lib\\site-packages\\serial\\serialutil.py',
    'PYMODULE'),
+  ('database.sql',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\database\\sql.py',
+   'PYMODULE'),
+  ('database', '-', 'PYMODULE'),
   ('view.agenda',
    'C:\\Users\\Manutenção '
    'Eletrica\\PycharmProjects\\Iluminacao\\view\\agenda.py',
@@ -937,4 +917,32 @@
   ('platform',
    'c:\\users\\manutenção '
    'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\platform.py',
+   'PYMODULE'),
+  ('database.bd',
+   'C:\\Users\\Manutenção '
+   'Eletrica\\PycharmProjects\\Iluminacao\\database\\bd.py',
+   'PYMODULE'),
+  ('sqlite3',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\sqlite3\\__init__.py',
+   'PYMODULE'),
+  ('sqlite3.dump',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\sqlite3\\dump.py',
+   'PYMODULE'),
+  ('sqlite3.dbapi2',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\sqlite3\\dbapi2.py',
+   'PYMODULE'),
+  ('tkinter',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\__init__.py',
+   'PYMODULE'),
+  ('tkinter.constants',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\constants.py',
+   'PYMODULE'),
+  ('tkinter.ttk',
+   'c:\\users\\manutenção '
+   'eletrica\\appdata\\local\\programs\\python\\python38\\lib\\tkinter\\ttk.py',
    'PYMODULE')])
